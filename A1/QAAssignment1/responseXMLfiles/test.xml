@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order>
+    <orderitems>
+        <items>
+            <partnumber>1234</partnumber>
+            <quantity>2</quantity>
+            <result>success</result>
+            <errormessage></errormessage>
+        </items>
+        <items>
+            <partnumber>5678</partnumber>
+            <quantity>25</quantity>
+            <result>failure</result>
+            <errormessage>no longer manufactured</errormessage>
+        </items>
+    </orderitems>
+</order>
