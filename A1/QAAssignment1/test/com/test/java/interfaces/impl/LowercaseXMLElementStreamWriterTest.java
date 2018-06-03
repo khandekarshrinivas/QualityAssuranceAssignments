@@ -1,6 +1,7 @@
 package com.test.java.interfaces.impl;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.main.java.responsexml.LowercaseXMLElementStreamWriter;
@@ -18,6 +19,7 @@ public class LowercaseXMLElementStreamWriterTest {
 	}
 	
 	@Test
+	@DisplayName("SerializeObjectIntoXMLFile - Valid Case")
 	public void testSerializeObjectIntoXMLFile() throws Exception {
 		lowercaseXMLElementStreamWriter.serializeObjectIntoXMLFile(MockXMLObjectData.getResponseOrder());
 	}

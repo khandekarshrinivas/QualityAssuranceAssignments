@@ -3,6 +3,7 @@ package com.test.java.interfaces.impl;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.main.java.requestxml.IncomingOrder;
@@ -10,6 +11,7 @@ import com.main.java.requestxml.LowercaseXMLElementStreamReader;
 
 public class LowercaseXMLElementStreamReaderTest {
 	@Test
+	@DisplayName("LowercaseXMLElementStreamReader - Valid Case")
 	void testLowercaseXMLElementStreamReader() {
 		try {
 			LowercaseXMLElementStreamReader reader = new LowercaseXMLElementStreamReader(
@@ -22,6 +24,7 @@ public class LowercaseXMLElementStreamReaderTest {
 	}
 
 	@Test
+	@DisplayName("LowercaseXMLElementStreamReader - Exception")
 	void testLowercaseXMLElementStreamReader_Exception() {
 
 		assertThrows(Exception.class, () -> {
