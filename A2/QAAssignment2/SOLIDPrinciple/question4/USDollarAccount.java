@@ -13,4 +13,9 @@ public class USDollarAccount extends BankAccount
 	{
 		balance -= amount * EXCHANGE_RATE;
 	}
+	
+	public float GetBalance()
+	{
+		return balance;
+	}
 }
