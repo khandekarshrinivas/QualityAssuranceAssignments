@@ -16,6 +16,7 @@ public class USDollarAccount extends BankAccount
 	
 	public float GetBalance()
 	{
+		System.out.println("Returning USDs");
 		return balance;
 	}
 }

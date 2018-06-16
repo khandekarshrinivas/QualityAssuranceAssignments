@@ -1,21 +1,15 @@
 package question5;
 
+import java.util.List;
+
 public class CountryGDPReport {
-	Canada canada;
-	Mexico mexico;
 
-	public CountryGDPReport() {
-		canada = new Canada();
-		mexico = new Mexico();
-	}
-
-	public void PrintCountryGDPReport() {
-		System.out.println("GDP By Country:\n");
-		System.out.println("- Canada:\n");
-		System.out.println("   - Agriculture: " + canada.getAgriculture());
-		System.out.println("   - Manufacturing: " + canada.getManufacturing());
-		System.out.println("- Mexico:\n");
-		System.out.println("   - Agriculture: " + mexico.getAgriculture());
-		System.out.println("   - Tourism: " + mexico.getTourism());
+	public void PrintCountryGDPReport(List<ICountry> countries) {
+		if (countries != null && !countries.isEmpty()) {
+			System.out.println("GDP By Country:\n");
+			for (ICountry country : countries) {
+				country.PrintCountryGDPReport();
+			}
+		}
 	}
 }
