@@ -1,38 +1,47 @@
 import java.util.ArrayList;
 
 // Square is a composite, making up the Composite pattern (contains components)
-public class Square extends BoardComponent
-{
+public class Square extends BoardComponent {
 	private final ArrayList<BoardComponent> children;
 	private BoardComponent parent;
-	
-	public Square()
-	{
+
+	public Square() {
 		super();
 		children = new ArrayList<BoardComponent>();
 	}
 
 	@Override
-	public void Operation()
-	{
-		for (int i = 0; i < children.size(); i++)
-		{
-			BoardComponent child = children.get(i);
+	public void Operation() {
+
+		ArrayList<BoardComponent> childrenCopy = new ArrayList<BoardComponent>(children);
+		for (int i = 0; i < childrenCopy.size(); i++) {
+			BoardComponent child = childrenCopy.get(i);
 			child.Operation();
 		}
 	}
 
 	@Override
-	public void Add(BoardComponent child)
-	{
+	public void Add(BoardComponent child) {
 		// I am now this child's parent.
 		children.add(child);
 		child.SetParent(this);
 	}
 
 	@Override
-	public void Remove(BoardComponent child)
-	{
+	public void Remove(BoardComponent child) {
 		children.remove(child);
+	}
+
+	@Override
+	public void Update(BoardComponent boardComponentHit) {
+
+		if (this.equals(boardComponentHit)) {
+			for (int i=0; i<children.size();i++) {
+				children.get(i).Update(boardComponentHit);
+			}
+			/*for (BoardComponent boardComponent : children) {
+				boardComponent.update(boardComponentHit);
+			}*/
+		}
 	}
 }

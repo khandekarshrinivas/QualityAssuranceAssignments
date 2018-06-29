@@ -9,6 +9,7 @@ public class StartGameCommand extends Command
 	public void Execute()
 	{
 		// The receiver for the StartGameCommand is the GameBoard
+		System.out.println("Start Game");
 		GameBoard board = (GameBoard)receiver;
 		board.StartGame();
 	}
