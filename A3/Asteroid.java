@@ -21,8 +21,7 @@ public class Asteroid extends BoardComponent
 			// When an Asteroid impacts the ground it needs to send an event to the
 			// observer to tell it that it impacted the ground in the square it belongs
 			// to.
-			// <-- Send event to observer.
-			
+		
 			GameBoard.Instance().GetSubject().Notify(parent);
 			
 			// It should then remove itself from its parent, it no longer exists in the
@@ -45,7 +44,7 @@ public class Asteroid extends BoardComponent
 
 	@Override
 	public void Update(BoardComponent boardComponentHit) {
-		// TODO Auto-generated method stub
+		// I'm a leaf
 		
 	}
 

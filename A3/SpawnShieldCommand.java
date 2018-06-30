@@ -15,7 +15,7 @@ public class SpawnShieldCommand extends Command {
 		System.out.println("Spawning Shield at (" + x + "," +y + ")");
 		Shield shield= (Shield) factory.MakeShield(square);
 		
-		System.out.println(GameBoard.Instance().GetBoard());
+		//Decorating Square with Shield object
 		GameBoard.Instance().GetBoard().get(y).set(x, shield);
 	}
 

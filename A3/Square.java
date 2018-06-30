@@ -39,9 +39,6 @@ public class Square extends BoardComponent {
 			for (int i=0; i<children.size();i++) {
 				children.get(i).Update(boardComponentHit);
 			}
-			/*for (BoardComponent boardComponent : children) {
-				boardComponent.update(boardComponentHit);
-			}*/
 		}
 	}
 }

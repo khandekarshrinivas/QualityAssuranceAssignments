@@ -32,26 +32,22 @@ public class Shield extends BoardComponent {
 	public void Update(BoardComponent boardComponentHit) {
 
 		if (this.square.equals(boardComponentHit)) {
-			if (shieldHealth == 0) {
-				
+			if (shieldHealth <= 0) {
 				ArrayList<ArrayList<BoardComponent>> board = GameBoard.Instance().GetBoard();
-				for(int i=0; i< board.size(); i++) {
+				for (int i = 0; i < board.size(); i++) {
 					ArrayList<BoardComponent> row = board.get(i);
-					for(int j=0;j<row.size();i++) {
-						if(this.square.equals(row.get(j))) {
+					for (int j = 0; j < row.size(); j++) {
+						if (this.equals(row.get(j))) {
 							row.set(j, this.square);
 							GameBoard.Instance().GetSubject().Detach(this);
 							GameBoard.Instance().GetSubject().Attach(this.square);
-							this.square.Update(boardComponentHit);
-							parent.Remove(this);
 						}
 					}
 				}
-				//square.Update(boardComponentHit);
 			} else {
 				shieldHealth -= 1;
 			}
-	}
+		}
 	}
 
 }
