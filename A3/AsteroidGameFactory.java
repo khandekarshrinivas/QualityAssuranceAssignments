@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class AsteroidGameFactory implements IAsteroidGameFactory {
 	@Override
 	public BoardComponent MakeSquare() {
+		//Spawning the Square class and attaching to the observer list
 		Square square = new Square();
 		GameBoard.Instance().GetSubject().Attach(square);
 		return square;
@@ -12,6 +13,7 @@ public class AsteroidGameFactory implements IAsteroidGameFactory {
 
 	@Override
 	public BoardComponent MakeBuilding() {
+		//Spawning building and incrementing building count
 		Building building = new Building();
 		GameBoard.Instance().IncrementBuildingCount();
 		return building;
@@ -19,12 +21,14 @@ public class AsteroidGameFactory implements IAsteroidGameFactory {
 
 	@Override
 	public Asteroid MakeAsteroid(int height) {
+		//Spawning Asteroid
 		Asteroid asteroid = new Asteroid(height);
 		return asteroid;
 	}
 
 	@Override
 	public BoardComponent MakeShield(BoardComponent square) {
+		//Spawning Shield and attaching shield object to the observer list and detaching square object from the list.
 		GameBoard.Instance().GetSubject().Detach(square);
 		BoardComponent shield = new Shield(square);
 		GameBoard.Instance().GetSubject().Attach(shield);

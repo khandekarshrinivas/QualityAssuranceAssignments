@@ -38,13 +38,20 @@ public class Shield extends BoardComponent {
 					ArrayList<BoardComponent> row = board.get(i);
 					for (int j = 0; j < row.size(); j++) {
 						if (this.equals(row.get(j))) {
+							// Replace the shield object with square object, ie., removing decorator of the
+							// square class when the health of the shield goes to 0
 							row.set(j, this.square);
+							
+							//detaching the shield class from the observer list
 							GameBoard.Instance().GetSubject().Detach(this);
+							
+							//attaching the shield class from the observer list
 							GameBoard.Instance().GetSubject().Attach(this.square);
 						}
 					}
 				}
 			} else {
+				//decrementing the health by 1 when asteropid is hit
 				shieldHealth -= 1;
 			}
 		}

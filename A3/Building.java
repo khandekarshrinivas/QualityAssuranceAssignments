@@ -26,11 +26,14 @@ public class Building extends BoardComponent {
 	@Override
 	public void Update(BoardComponent boardComponentHit) {
 
+		// Decrement the health by 1, when it is hit by an asteroid
 		this.buildingHealth -= 1;
 		if (this.buildingHealth == 0) {
+			// when building health goes to 0, decrement the building count by 1 and remove
+			// the building from its square
 			parent.Remove(this);
 			GameBoard.Instance().DecrementBuildingCount();
-			
+
 		}
 
 	}

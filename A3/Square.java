@@ -35,8 +35,10 @@ public class Square extends BoardComponent {
 	@Override
 	public void Update(BoardComponent boardComponentHit) {
 
+		// Update the children of the square, when its the one which is hit by the
+		// asteroid
 		if (this.equals(boardComponentHit)) {
-			for (int i=0; i<children.size();i++) {
+			for (int i = 0; i < children.size(); i++) {
 				children.get(i).Update(boardComponentHit);
 			}
 		}
