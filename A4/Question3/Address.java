@@ -43,5 +43,13 @@ public class Address {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
+	
+	public boolean IsAddressEqual()
+	{
+		return this.getStreet().equals("Rob street") &&
+			this.getCity().equals("Rob city") &&
+			this.getProvince().equals("Rob province") &&
+			this.getPostalCode().equals("Rob postalcode");
+	}
 
 }

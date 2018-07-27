@@ -16,9 +16,6 @@ public class Person
 
 	private boolean IsRobsAddress(Address address)
 	{
-		return address.getStreet().equals("Rob street") &&
-			address.getCity().equals("Rob city") &&
-			address.getProvince().equals("Rob province") &&
-			address.getPostalCode().equals("Rob postalcode");
+		return address.IsAddressEqual();
 	}
 }
