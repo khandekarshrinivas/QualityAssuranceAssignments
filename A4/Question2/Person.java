@@ -1,46 +1,38 @@
-public class Person
-{
+public class Person {
 	private String name;
 
-	private String areaCode;
-	private String phoneNumber;
+	private PhoneNumber phoneNumber;
+	private Authenticator authenticator;
 
-	private String userName;
-	private String password;
-
-	public Person(String name)
-	{
+	public Person(String name) {
 		this.name = name;
+		authenticator = new Authenticator();
+		phoneNumber = new PhoneNumber();
 	}
 
-	public void SetAreaCode(String areaCode)
-	{
-		this.areaCode = areaCode;
-	}
-	public String GetAreaCode()
-	{
-		return areaCode;
-	}
-	public void SetPhoneNumber(String phoneNumber)
-	{
-		this.phoneNumber = phoneNumber;
-	}
-	public String GetPhoneNumber()
-	{
-		if (areaCode != null && areaCode != "")
-		{
-			return "(" + areaCode + ") " + phoneNumber; 
-		}
-		return phoneNumber;
+	public void SetAreaCode(String areaCode) {
+		phoneNumber.SetAreaCode(areaCode);
 	}
 
-	public void SetLoginCredentials(String userName, String password)
-	{
-		this.userName = userName;
-		this.password = password;
+	public String GetAreaCode() {
+		return phoneNumber.GetAreaCode();
 	}
-	public boolean AuthenticateUser()
-	{
-		return (userName.equals("joe") && password.equals("joepass"));
+
+	public void SetPhoneNumber(String number) {
+		phoneNumber.SetPhoneNumber(number);
+	}
+
+	public String GetPhoneNumber() {
+		return phoneNumber.GetPhoneNumber();
+	}
+
+	public void SetLoginCredentials(String userName, String password) {
+		authenticator.setUserName(userName);
+		authenticator.setPassword(password);
+	}
+
+	public boolean AuthenticateUser() {
+		return authenticator.AuthenticateUser();
+
 	}
 }
