@@ -1,3 +1,3 @@
-public interface class MathOperation {
+public interface MathOperation {
 	public int GetResult();
 }
