@@ -1,13 +1,8 @@
 
-public class Division implements MathOperation {
-
-	int leftOperand;
-	int rightOperand;
+public class Division extends MathOperation {
 
 	public Division(int leftOperand, int rightOperand) {
-		super();
-		this.leftOperand = leftOperand;
-		this.rightOperand = rightOperand;
+		super(leftOperand, rightOperand);
 	}
 
 	@Override

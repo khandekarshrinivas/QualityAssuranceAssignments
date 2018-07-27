@@ -1,13 +1,8 @@
 
-public class Substraction implements MathOperation {
-
-	int leftOperand;
-	int rightOperand;
+public class Substraction extends MathOperation {
 
 	public Substraction(int leftOperand, int rightOperand) {
-		super();
-		this.leftOperand = leftOperand;
-		this.rightOperand = rightOperand;
+		super(leftOperand, rightOperand);
 	}
 
 	@Override

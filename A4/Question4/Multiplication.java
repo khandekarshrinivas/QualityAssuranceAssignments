@@ -1,13 +1,8 @@
 
-public class Multiplication implements MathOperation {
-
-	int leftOperand;
-	int rightOperand;
+public class Multiplication extends MathOperation {
 
 	public Multiplication(int leftOperand, int rightOperand) {
-		super();
-		this.leftOperand = leftOperand;
-		this.rightOperand = rightOperand;
+		super(leftOperand, rightOperand);
 	}
 
 	@Override
