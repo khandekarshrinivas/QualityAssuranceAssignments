@@ -1,5 +1,5 @@
 
-public class Substraction extends MathOperation {
+public class Substraction implements MathOperation {
 
 	int leftOperand;
 	int rightOperand;

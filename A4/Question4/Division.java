@@ -1,5 +1,5 @@
 
-public class Division extends MathOperation {
+public class Division implements MathOperation {
 
 	int leftOperand;
 	int rightOperand;

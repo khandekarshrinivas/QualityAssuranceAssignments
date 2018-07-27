@@ -1,3 +1,3 @@
-public abstract class MathOperation {
-	public abstract int GetResult();
+public interface class MathOperation {
+	public int GetResult();
 }

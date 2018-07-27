@@ -1,5 +1,5 @@
 
-public class Addition extends MathOperation {
+public class Addition implements MathOperation {
 
 	int leftOperand;
 	int rightOperand;

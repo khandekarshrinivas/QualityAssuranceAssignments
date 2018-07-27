@@ -1,5 +1,5 @@
 
-public class Multiplication extends MathOperation {
+public class Multiplication implements MathOperation {
 
 	int leftOperand;
 	int rightOperand;
