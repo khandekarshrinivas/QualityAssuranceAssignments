@@ -1,5 +1,5 @@
 
-public class OpenCommand extends AbstractCommand {
+public class OpenCommand implements AbstractCommand {
 
 	@Override
 	public String GetHelp() {

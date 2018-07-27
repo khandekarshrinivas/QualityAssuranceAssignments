@@ -1,4 +1,4 @@
-public abstract class AbstractCommand {
+public interface AbstractCommand {
 
-	public abstract String GetHelp();
+	public String GetHelp();
 }

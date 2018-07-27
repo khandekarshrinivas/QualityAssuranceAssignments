@@ -1,5 +1,5 @@
 
-public class PrintCommand extends AbstractCommand {
+public class PrintCommand implements AbstractCommand {
 
 	@Override
 	public String GetHelp() {
