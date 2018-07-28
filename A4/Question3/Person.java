@@ -16,6 +16,6 @@ public class Person
 
 	private boolean IsRobsAddress(Address address)
 	{
-		return address.IsAddressEqual();
+		return address.IsAddressEqual(address);
 	}
 }

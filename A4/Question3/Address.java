@@ -44,12 +44,12 @@ public class Address {
 		this.postalCode = postalCode;
 	}
 	
-	public boolean IsAddressEqual()
+	public boolean IsAddressEqual(Address address)
 	{
-		return this.getStreet().equals("Rob street") &&
-			this.getCity().equals("Rob city") &&
-			this.getProvince().equals("Rob province") &&
-			this.getPostalCode().equals("Rob postalcode");
+		return address.getStreet().equals("Rob street") &&
+				address.getCity().equals("Rob city") &&
+				address.getProvince().equals("Rob province") &&
+				address.getPostalCode().equals("Rob postalcode");
 	}
 
 }
